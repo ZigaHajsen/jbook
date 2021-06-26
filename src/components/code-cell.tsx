@@ -3,7 +3,7 @@ import { CodeEditor, Preview } from './';
 import bundle from '../bundler';
 import { Resizable } from './';
 
-const CodeCell = () => {
+const CodeCell: React.FC = () => {
   const [input, setInput] = useState('');
   const [code, setCode] = useState('');
   const [error, setError] = useState('');

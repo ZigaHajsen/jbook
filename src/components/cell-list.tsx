@@ -1,4 +1,4 @@
-import { useTypedSelector } from '../hooks/use-typed-selector';
+import { useTypedSelector } from '../hooks';
 import { CellListItem } from './';
 
 const CellList: React.FC = () => {

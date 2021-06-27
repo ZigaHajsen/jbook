@@ -37,7 +37,7 @@ const html = `
     </html>
   `;
 
-const Preview: React.FC<PreviewProps> = ({ code, err }) => {
+export const Preview: React.FC<PreviewProps> = ({ code, err }) => {
   const iframe = useRef<any>();
 
   useEffect(() => {
@@ -59,5 +59,3 @@ const Preview: React.FC<PreviewProps> = ({ code, err }) => {
     </div>
   );
 };
-
-export default Preview;

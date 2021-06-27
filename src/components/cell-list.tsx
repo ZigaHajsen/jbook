@@ -1,7 +1,7 @@
 import { useTypedSelector } from '../hooks';
 import { CellListItem } from './';
 
-const CellList: React.FC = () => {
+export const CellList: React.FC = () => {
   const cells = useTypedSelector(({ cells: { order, data } }) =>
     order.map((id) => data[id])
   );
@@ -12,5 +12,3 @@ const CellList: React.FC = () => {
 
   return <div>{renderedCells}</div>;
 };
-
-export default CellList;

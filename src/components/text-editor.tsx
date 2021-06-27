@@ -8,7 +8,7 @@ interface TextEditorProps {
   cell: Cell;
 }
 
-const TextEditor: React.FC<TextEditorProps> = ({ cell }) => {
+export const TextEditor: React.FC<TextEditorProps> = ({ cell }) => {
   const ref = useRef<HTMLDivElement | null>(null);
   const [editing, setEditing] = useState(false);
 
@@ -52,5 +52,3 @@ const TextEditor: React.FC<TextEditorProps> = ({ cell }) => {
     </div>
   );
 };
-
-export default TextEditor;

@@ -9,7 +9,7 @@ interface CodeCellProps {
   cell: Cell;
 }
 
-const CodeCell: React.FC<CodeCellProps> = ({ cell }) => {
+export const CodeCell: React.FC<CodeCellProps> = ({ cell }) => {
   const [code, setCode] = useState('');
   const [error, setError] = useState('');
 
@@ -41,5 +41,3 @@ const CodeCell: React.FC<CodeCellProps> = ({ cell }) => {
     </Resizable>
   );
 };
-
-export default CodeCell;

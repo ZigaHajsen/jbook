@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import { CodeEditor, Preview } from './';
-import bundle from '../bundler';
-import { Resizable } from './';
-import { Cell } from '../state';
-import { useActions } from '../hooks';
+import { CodeEditor, Preview } from '..';
+import bundle from '../../bundler';
+import { Resizable } from '..';
+import { Cell } from '../../state';
+import { useActions } from '../../hooks';
 
 interface CodeCellProps {
   cell: Cell;

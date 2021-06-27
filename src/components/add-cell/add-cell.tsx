@@ -1,4 +1,4 @@
-import { useActions } from '../hooks';
+import { useActions } from '../../hooks';
 import './add-cell.css';
 
 interface AddCellProps {

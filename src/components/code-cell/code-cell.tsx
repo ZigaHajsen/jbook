@@ -13,6 +13,11 @@ export const CodeCell: React.FC<CodeCellProps> = ({ cell }) => {
   const bundle = useTypedSelector((state) => state.bundles[cell.id]);
 
   useEffect(() => {
+    if (!bundle) {
+      createBundle(cell.id, cell.content);
+      return;
+    }
+
     const timer = setTimeout(async () => {
       createBundle(cell.id, cell.content);
     }, 1000);
@@ -20,6 +25,8 @@ export const CodeCell: React.FC<CodeCellProps> = ({ cell }) => {
     return () => {
       clearTimeout(timer);
     };
+
+    // eslint-disable-next-line
   }, [createBundle, cell.id, cell.content]);
 
   return (

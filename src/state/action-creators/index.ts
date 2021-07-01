@@ -8,7 +8,6 @@ import {
   UpdateCellAction,
   BundleStartAction,
   BundleCompleteAction,
-  Action,
 } from '../actions';
 import { CellTypes } from '../cell';
 import bundle from '../../bundler';
@@ -54,7 +53,9 @@ export const insertCellAfter = (
 };
 
 export const createBundle = (cellId: string, input: string) => {
-  return async (dispatch: Dispatch<Action>) => {
+  return async (
+    dispatch: Dispatch<BundleStartAction | BundleCompleteAction>
+  ) => {
     dispatch({
       type: ActionType.BUNDLE_START,
       payload: {
